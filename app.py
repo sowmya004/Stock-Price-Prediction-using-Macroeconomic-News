@@ -2,7 +2,7 @@ import numpy as np
 from flask import Flask, request,jsonify,render_template
 import pickle
 from _datetime import date
-
+import pandas as pd
 
 app = Flask(__name__,template_folder='templates')
 model = pickle.load(open('new_model_pickle','rb'))
@@ -46,10 +46,15 @@ def predict_api():
     output = prediction[0]
     return jsonify(output)
 
-# @app.route('/twitter-stock-data')
-# def vmd_timestamp():
-#     df = pd.read_csv('Twitter_stock_final_dataset (1).csv')
-#     return render_template('df.html', )
+@app.route('/twitter-stock-data')
+def vmd_timestamp():
+    df = pd.read_csv('Twitter_stock_final_dataset (1).csv')
+    return render_template('df.html',tables=[df.to_html(classes='data')], titles=df.columns.values)
+
+@app.route('/actual-vs-predicted')
+def act_vs_pred():
+    df = pd.read_csv('act_vs_pred.csv')
+    return render_template('df.html',tables=[df.to_html(classes='data')], titles=df.columns.values)
 
 if __name__ == "__main__":
     app.run(debug=True)
