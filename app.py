@@ -5,7 +5,7 @@ from _datetime import date
 
 
 app = Flask(__name__,template_folder='templates')
-model = pickle.load(open('C:/Users/sowmy/Desktop/new_model_pickle','rb'))
+model = pickle.load(open('C:/Users/sowmy/Desktop/Flask/new_model_pickle','rb'))
 
 @app.route('/')
 def home():
