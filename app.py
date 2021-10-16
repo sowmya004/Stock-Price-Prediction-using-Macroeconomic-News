@@ -48,7 +48,8 @@ def predict_api():
 
 @app.route('/twitter-stock-data')
 def vmd_timestamp():
-    df = pd.read_csv('Twitter_stock_final_dataset (1).csv')
+    df1 = pd.read_csv('Twitter_stock_final_dataset (1).csv')
+    df = df1[:100]
     return render_template('df.html',tables=[df.to_html(classes='data')], titles=df.columns.values)
 
 @app.route('/actual-vs-predicted')
