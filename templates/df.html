@@ -12,7 +12,7 @@
         text-align:center;
         letter-spacing:1.2px;
         text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-        background-image: url('https://images.hdqwalls.com/download/stock-chart-minimal-4k-8c-2048x1152.jpg'); 
+        background-image: url('https://images.hdqwalls.com/download/stock-chart-minimal-4k-8c-2048x1152.jpg');  
         /* background-image: url('https://mediacloud.kiplinger.com/image/private/s--KvtEp0dc--/f_auto,t_primary-image-desktop@2/v1620416234/Investing/stock-market-today-050721.jpg'); */
         background-position: center center;
         background-repeat: no-repeat;
@@ -21,6 +21,11 @@
         fill-opacity: 0.5; 
     } 
 </style>
+{% for table in tables %}
+            {{titles[loop.index]}}
+            {{ table|safe }}
+{% endfor %}
 </body>
 </html>
+
 
