@@ -83,7 +83,7 @@ We have deployed the model using Flask framework, as it is a opensource Python l
 
 Heroku : [Visit here](https://stock-prediction-news-headline.herokuapp.com/)
 
-Video  : [Click here](https://drive.google.com/file/d/1PzLBdv7lB_q3bjo9xp-pmzDJ7jNMu7O4/view?usp=sharing)
+Video  : [Click here](https://drive.google.com/file/d/1xI_m45h5ejmMf9CN2_SRyZQku9IqhahU/view?usp=sharing)
 
 
 
