@@ -13,7 +13,8 @@
 
 <body>
   <h1>STOCK PRICE PREDICTION USING MACRO HEADLINES</h1>
-  <p>Machine learning model used to predict stock close price for a given day <br> based on twitter sentiment analysis</p>
+  <p>Machine learning model used to predict stock close price for a given day <br> 
+    based on twitter sentiment analysis</p>
  <div class="login">
      <!-- Main Input For Receiving Query to our ML -->
     <form style="width: 100%;" action="{{ url_for('predict')}}"method="post">
@@ -59,11 +60,17 @@
     </div>
     
   </form>
-<!-- <div class="df">
+<div class="df">
     <p align="center"><a href=twitter-stock-data >
-      <button type="submit" class="btn btn-primary btn-block btn-large" action="/df">View dataframe</button> 
+      <button type="submit" style="color:rgb(202, 17, 17);" class="btn btn-primary btn-block btn-large" action="/df">View dataframe</button> 
     </a></p>
-</div> -->
+</div>
+
+<div class="df">
+  <p align="center"><a href=actual-vs-predicted >
+    <button style="color:rgb(202, 17, 17);" type="submit" class="btn btn-primary btn-block btn-large" action="/ap">Actual vs Predicted price</button> 
+  </a></p>
+</div>
   <!--   -->
 <div>
   <table>
